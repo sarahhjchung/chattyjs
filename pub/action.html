@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Chatty</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <div class="navBar">
+            <img src="assets/icon.png" alt="icon" class="icon" />
+            <a href="index.html" class="iconHeader">Chatty.js</a>
+            <div class="headerRight">
+                <a class="headerItem" href="examples.html">Examples</a>
+                <a class="headerItem" href="gettingStarted.html">Getting Started</a>
+                <a class="headerItem" style="text-decoration: underline solid #81B29A;" href="api.html">Documentation</a>
+                <a class="headerItem" style="cursor: not-allowed" href="#github">Github</a>
+            </div>
+        </div>
+        <div class="infoContainer">
+            <div class="sideBar">
+                <a href="api.html">Chatbox</a>
+                <a href="api.html">&emsp;makeChatbox</a>
+                <a href="api.html">&emsp;minimizeChatbox</a>
+                <a href="api.html">&emsp;openChatbox</a>
+                <a href="api.html">&emsp;createInlineButton</a>
+                <a href="api.html">&emsp;addChatBubble</a>
+                <a href="api.html">&emsp;addQuestion</a>
+                <a href="api.html">&emsp;callQuestion</a>
+                <a href="question.html">Question</a>
+                <a href="question.html">&emsp;getActions</a>
+                <a href="question.html">&emsp;onAnswer</a>
+                <a href="action.html" style="color: #81B29A">Action</a>
+                <a href="action.html">&emsp;evokeAction</a>
+            </div>
+            <div class="content">
+                <h1>Action</h1>
+                <p>
+                    An Action object represents an action that will follow from a 
+                    response to a question by a user. An action can be a simple text 
+                    response, another question, or a combination of both.
+                </p>
+                <h2>
+                    Type parameters
+                </h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Default</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>message</td>
+                        <td><code>none</code></td>
+                        <td>String</td>
+                        <td>
+                            The message in the chat bubble of this action.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>nextQuestionID</td>
+                        <td><code>none</code></td>
+                        <td>Number</td>
+                        <td>
+                            The ID of the question that should be called after the user
+                            responds to the question that this action follows.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>hasLink</td>
+                        <td><code>none</code></td>
+                        <td>Boolean</td>
+                        <td>
+                            The boolean that determines whether this action's response chat bubble 
+                            contains an interactive link.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>href</td>
+                        <td><code>null</code></td>
+                        <td>String</td>
+                        <td>The href that the link should lead to.</td>
+                    </tr>
+                    <tr>
+                        <td>hasImage</td>
+                        <td><code>false</code></td>
+                        <td>Boolean</td>
+                        <td>
+                            The boolean that determines whether this action's response chat bubble 
+                            contains an image.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>src</td>
+                        <td><code>null</code></td>
+                        <td>String</td>
+                        <td>
+                            The src of the image.
+                        </td>
+                    </tr>
+                </table>
+                <h2>Constructor</h2>
+                <hr/>
+                <p>To create an Action object, you must call its constructor.</p>
+                <pre>
+                    <code>
+    new Action(question, nextQuetionID, hasLink, href, hasImage, src)
+                    </code>
+                </pre>
+                <h2>Functions</h2>
+                <hr/>
+                <p>The following are functions you can call by accessing the 
+                    Action object.
+                </p>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Arguments</th>
+                        <th>Behaviours</th>
+                        <th>Return Value</th>
+                    </tr>
+                    <tr>
+                        <td>evokeAction</td>
+                        <td><code>none</code></td>
+                        <td>
+                            Evokes the action. <br /><br />If the action contains a <code>message</code>, it will send a 
+                            chat bubble containing the message and necessary contents (ie. link, image).
+                            If the action has a valid <code>nextQuestionID</code>, it will then call the
+                            question of that ID.
+                        </td>
+                        <td><code>void</code></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

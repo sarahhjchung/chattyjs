@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Chatty</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <body>
+
+        <div class="navBar">
+            <img src="assets/icon.png" alt="icon" class="icon" />
+            <a href="index.html" class="iconHeader">Chatty.js</a>
+            <div class="headerRight">
+                <a class="headerItem" href="examples.html">Examples</a>
+                <a class="headerItem" style="text-decoration: underline solid #3D405B;" href="gettingStarted.html">Getting Started</a>
+                <a class="headerItem" href="api.html">Documentation</a>
+                <a class="headerItem" style="cursor: not-allowed" href="#github">Github</a>
+            </div>
+        </div>
+        <div class="infoContainer">
+            <div class="sideBar">
+                <a href="gettingStarted.html" style="color: #3D405B">Getting Started</a>
+                <a href="about.html">About Chatty.js</a>
+            </div>
+            <div class="content">
+                <h1>Getting Started</h1>
+                <p>
+                    Follow this quick tutorial to get started with Chatty.js!
+                </p>
+                <h2>Installation</h2>
+                <hr/>
+                <p>
+                    To install Chatty.js, download this <a href="assets/chatty.zip" download>zip folder</a>. Extract all files and 
+                    insert the extracted folder into the <b>same level</b> as all your html files.
+                </p>
+                <h2>Integration</h2>
+                <hr/>
+                <p>
+                    Chatty.js can be integrated with plain JavaScript. The following code shows what 
+                    scripts you must add to your html files that use Chatty.js:
+                </p>
+                <pre>
+                    <code>
+    <span><</span>script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><span><</span>/script>
+    <span><</span>script defer type="text/javascript" src='chatty/js/Chatty.js'><span><</span>/script>
+    <span><</span>link rel="stylesheet" type="text/css" href="chatty/chatty.css">
+                    </code>
+                </pre>
+                <p>
+                    You must also include a script tag where the src is the path to the JavaScript file 
+                    that calls the Chatty.js function calls. It should look similar to:
+                </p>
+                <pre>
+                    <code>
+    <span><</span>script defer type="text/javascript" src='fileName.js'><span><</span>/script>
+                    </code>
+                </pre>
+                <h2>Usage</h2>
+                <hr/>
+                <p>
+                    Chatty.js is a JS library to let you quickly set up a simple chatbox for your web app.
+                    Here is a short code snippet that your JS file should look similar to when you set up
+                    your chatbox for the first time:
+                </p>
+                <pre>
+                    <code>
+    <span class="comment">// These commands will generate a chatbox onto your webpage.</span>
+    const cb = new Chatbox("#E07A5F", "light")
+    cb.makeChatbox()
+                    </code> 
+                </pre>
+                <p>
+                    Go to <a href="examples.html">Examples</a> to learn about all the different functionalities you can add to 
+                    your chatbox!
+                </p>
+            </div>
+        </div>
+
+    </body>
+</html>

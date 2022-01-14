@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Chatty</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="chatty/chatty.css">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&display=swap" rel="stylesheet">
+
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer type="text/javascript" src='chatty/js/Chatty.js'></script>
+        <script defer type="text/javascript" src='landingjs/examples5.js'></script>
+        
+    <body>
+
+        <div class="navBar">
+            <img src="assets/icon.png" alt="icon" class="icon" />
+            <a href="index.html" class="iconHeader" style="font-weight: 900;">Chatty.js</a>
+            <div class="headerRight">
+                <a class="headerItem" style="text-decoration: underline solid #E07A5F;" href="examples.html">Examples</a>
+                <a class="headerItem" href="gettingStarted.html">Getting Started</a>
+                <a class="headerItem" href="api.html">Documentation</a>
+                <a class="headerItem" style="cursor: not-allowed" href="#github">Github</a>
+            </div>
+        </div>
+        <div class="infoContainer">
+            <div class="sideBar">
+                <a href="examples.html">Generate a Full Chatbox</a>
+                <a href="inline.html" style="color: #E07A5F">Generate an Inline Chatbox</a>
+                <a href="messages.html">Simple Text Messages</a>
+                <a href="questions.html">Simple Question Flow</a>
+                <a href="link.html">Inserting a Link</a>
+                <a href="image.html">Inserting an Image</a>
+                <!-- <a href="data.html">Data Collecting Questions</a> -->
+            </div>
+            <div class="content">
+                <h1>Generate an Inline Chatbox</h1>
+                <p id="exampleButton">
+                    You can also add an inline chatbox if you wish! An inline chatbox button can be
+                    placed anywhere on your web app and will open/minimize the chatbox from there 
+                    when a user clicks on it. This is a unique feature that 
+                    might seem out of place, but can actually be useful for large web apps with a 
+                    lot of content. It'll be a fun addition to help users be more engaged to each 
+                    part of your web app. 
+                    <br /><br />Just like a full chatbox, after generating an inline chatbox, you 
+                    will be able to add questions, links, images, and more to interact with your users 
+                    and create a fun user experience!
+                    <br /> <br />Click on the inline icon on the right to see the example.
+                </p>
+                <pre>
+                    <code>
+    const cb = new Chatbox("#E07A5F", "light")
+    cb.makeChatbox()
+
+    const q0 = cb.addQuestion("Do you like this new feature?", ["Yes", "No"])
+    
+    <span class="comment">// Call the opening question</span>
+    cb.callQuestion(q0.questionID)
+    
+    <span class="comment">// Create actions to follow q0 and link actions to question</span>
+    const a0 = new Action("Thanks!", null, false)
+    const a1 = new Action("Aw that's alright", null, false)
+    q0.getActions([a0, a1])
+
+    <span class="comment">// Get the element in your document you'd like to add the inline button next to</span>
+    const element = document.getElementById("exampleButton")
+    cb.createInlineButton(element, "20px")
+                    </code> 
+                </pre>
+            </div>
+        </div>
+    </body>
+</html>

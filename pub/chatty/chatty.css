@@ -1,0 +1,123 @@
+body {
+    font-family: 'Epilogue', sans-serif;    
+}
+
+#chatbox {
+    height: 400px;
+    width: 280px;
+    box-shadow: 10px 10px 20px grey;
+    border-radius: 20px 20px 0px 0px;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+}
+
+.inlineButton {
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px grey;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 30;
+}
+
+#minimizedChatbox {
+    width: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 20px grey;
+    cursor: pointer;
+}
+
+#minimizedChatbox:hover {
+    opacity: 50%;
+}
+
+#chatboxHeader {
+    display: block;
+    margin: 5px 5px 5px auto;
+    height: 30px;
+    cursor: pointer;
+}
+
+#chatboxHeader:hover {
+    opacity: 50%;
+}
+
+#chatboxContent {
+    margin: auto;
+    height: 314px;
+    width: 280px;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.chatboxBubble {
+    max-width: 180px;
+    background-color: lightgrey;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+    display: block;
+}
+
+.chatboxBubbleDark {
+    max-width: 180px;
+    background-color: #808295;
+    color: white;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+    display: block;
+}
+
+.chatboxBubbleAnswer {
+    max-width: 200px;
+    background-color: lightgrey;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+}
+
+#chatInputContainer {
+    display: flex;
+    width: 270px;
+    height: 40px;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+}
+
+#chatInput {
+    display: block;
+    width: 220px;
+    height: 38px;
+    margin: auto 0px 6px;
+}
+
+#send {
+    display: block;
+    margin: auto 3px auto auto;
+    cursor: pointer;
+}
+
+#send:hover {
+    opacity: 50%;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.messageImg {
+    max-width: 180px;
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    display: block;
+    max-height: 100px;
+}

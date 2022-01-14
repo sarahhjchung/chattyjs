@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Chatty</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <div class="navBar">
+            <img src="assets/icon.png" alt="icon" class="icon" />
+            <a href="index.html" class="iconHeader">Chatty.js</a>
+            <div class="headerRight">
+                <a class="headerItem" href="examples.html">Examples</a>
+                <a class="headerItem" href="gettingStarted.html">Getting Started</a>
+                <a class="headerItem" style="text-decoration: underline solid #81B29A;" href="api.html">Documentation</a>
+                <a class="headerItem" style="cursor: not-allowed" href="#github">Github</a>
+            </div>
+        </div>
+        <div class="infoContainer">
+            <div class="sideBar">
+                <a href="api.html">Chatbox</a>
+                <a href="api.html">&emsp;makeChatbox</a>
+                <a href="api.html">&emsp;minimizeChatbox</a>
+                <a href="api.html">&emsp;openChatbox</a>
+                <a href="api.html">&emsp;createInlineButton</a>
+                <a href="api.html">&emsp;addChatBubble</a>
+                <a href="api.html">&emsp;addQuestion</a>
+                <a href="api.html">&emsp;callQuestion</a>
+                <a href="question.html" style="color: #81B29A">Question</a>
+                <a href="question.html">&emsp;getActions</a>
+                <a href="question.html">&emsp;onAnswer</a>
+                <a href="action.html">Action</a>
+                <a href="action.html">&emsp;evokeAction</a>
+            </div>
+            <div class="content">
+                <h1>Question</h1>
+                <p>
+                    A Question object represents a question to be asked in the chatbox.
+                </p>
+                <h2>
+                    Type parameters
+                </h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Default</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>question</td>
+                        <td><code>none</code></td>
+                        <td>String</td>
+                        <td>The question</td>
+                    </tr>
+                    <tr>
+                        <td>answers</td>
+                        <td><code>none</code></td>
+                        <td>String[]</td>
+                        <td>The valid responses to the question.</td>
+                    </tr>
+                    <tr>
+                        <td>actions</td>
+                        <td><code>[]</code></td>
+                        <td>String</td>
+                        <td>The actions with respect (by index) to the valid responses.</td>
+                    </tr>
+                    <tr>
+                        <td>quetionID</td>
+                        <td><code>none</code></td>
+                        <td>Number</td>
+                        <td>The unique ID of this question.</td>
+                    </tr>
+                    <tr>
+                        <td>formattedQuestion</td>
+                        <td><code>none</code></td>
+                        <td>String</td>
+                        <td>
+                            The formatted question that will show up inside the chatbox when called. 
+                            Includes the valid responses at the end of the question.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>formattedAnswers</td>
+                        <td><code>none</code></td>
+                        <td>String</td>
+                        <td>
+                            The message that includes the valid responses to prompt users who 
+                            type in an invalid response to try again.
+                        </td>
+                    </tr>
+                </table>
+                <h2>Constructor</h2>
+                <hr/>
+                <p>To create a Question object, you must call its constructor.</p>
+                <pre>
+                    <code>
+    new Question(question, answers)
+                    </code>
+                </pre>
+                <h2>Functions</h2>
+                <hr/>
+                <p>The following are functions you can call by accessing the 
+                    Question object.
+                </p>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Arguments</th>
+                        <th>Behaviours</th>
+                        <th>Return Value</th>
+                    </tr>
+                    <tr>
+                        <td>getActions</td>
+                        <td><code>actions</code></td>
+                        <td>
+                            Assigns <code>actions</code> to this question's actions.
+                        </td>
+                        <td><code>void</code></td>
+                    </tr>
+                    <tr>
+                        <td>onAnswer</td>
+                        <td><code>answer</code></td>
+                        <td>
+                            Checks that <code>answer</code> is a valid answer with leniency (ie. 
+                            'yes', 'YES' and 'yEs' are all valid for answer 'Yes'). Evokes the 
+                            corresponding action to the valid answer.
+                        </td>
+                        <td><code>void</code></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

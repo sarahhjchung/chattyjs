@@ -1,0 +1,23 @@
+{
+  "name": "js-library-chungh42",
+  "version": "1.0.0",
+  "description": "A js library that providers developers with an easily generated chatbox to use.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csc309-fall-2021/js-library-chungh42.git"
+  },
+  "author": "Sarah Chung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csc309-fall-2021/js-library-chungh42/issues"
+  },
+  "homepage": "https://github.com/csc309-fall-2021/js-library-chungh42#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

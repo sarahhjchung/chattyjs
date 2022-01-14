@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Chatty</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="chatty/chatty.css">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&display=swap" rel="stylesheet">
+
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer type="text/javascript" src='chatty/js/Chatty.js'></script>
+        <script defer type="text/javascript" src='landingjs/examples3.js'></script>
+        
+    <body>
+
+        <div class="navBar">
+            <img src="assets/icon.png" alt="icon" class="icon" />
+            <a href="index.html" class="iconHeader" style="font-weight: 900;">Chatty.js</a>
+            <div class="headerRight">
+                <a class="headerItem" style="text-decoration: underline solid #E07A5F;" href="examples.html">Examples</a>
+                <a class="headerItem" href="gettingStarted.html">Getting Started</a>
+                <a class="headerItem" href="api.html">Documentation</a>
+                <a class="headerItem" style="cursor: not-allowed" href="#github">Github</a>
+            </div>
+        </div>
+        <div class="infoContainer">
+            <div class="sideBar">
+                <a href="examples.html">Generate a Full Chatbox</a>
+                <a href="inline.html">Generate an Inline Chatbox</a>
+                <a href="messages.html">Simple Text Messages</a>
+                <a href="questions.html">Simple Question Flow</a>
+                <a href="link.html" style="color: #E07A5F">Inserting a Link</a>
+                <a href="image.html">Inserting an Image</a>
+                <!-- <a href="data.html">Data Collecting Questions</a> -->
+            </div>
+            <div class="content">
+                <h1>Inserting a Link</h1>
+                <p>
+                    By manipulating the parameters on the <code>Action</code> constructor,
+                    you can insert interactive links to your messages which can be really 
+                    helpful when directing users to the correct places on your website. 
+                    <br /> <br />Click on the icon on the bottom right of the screen to see the example (with customized positioning).
+                </p>
+                <pre>
+                    <code>
+    const cb = new Chatbox("#E07A5F", "light", "60%")
+    cb.makeChatbox()
+
+    const q0 = cb.addQuestion("Do you know how to add a simple text message using Chatty.js?", 
+        ["Yes", "No"])
+    
+    <span class="comment">// Call the opening question</span>
+    cb.callQuestion(q0.questionID)
+    
+    <span class="comment">// Create actions to follow q0 and link actions to question
+    // Note: Set the third parameter to true to signify that the fourth string parameter 
+    // should be an interactive link</span>
+    const a0 = new Action("Awesome! Click here to get started and create your first chatbox", 
+        null, true, "gettingStarted.html")
+    const a1 = new Action("Visit this page to learn how", null, true, "messages.html")
+    q0.getActions([a0, a1])
+                    </code> 
+                </pre>
+            </div>
+        </div>
+    </body>
+</html>
